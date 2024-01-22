@@ -1,13 +1,12 @@
-from app import app
-from flask import Flask
-from flask_migrate import Migrate
-from flask_sqlalchemy import SQLAlchemy
-from flask_restful import Api
-from models import  db, Vendor, Sweet, VendorSweet
+from app import create_app, db
+from models import Vendor, Sweet, VendorSweet
 
 
+app = create_app()
 
 with app.app_context():
+    
+    db.create_all()
 
     vendors = [
         {'name': 'Sweet Haven'},

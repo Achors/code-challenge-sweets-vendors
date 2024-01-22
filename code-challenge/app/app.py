@@ -17,9 +17,6 @@ def create_app():
     migrate.init_app(app, db)
     api.init_app(app)
 
-    from models import Vendor, Sweet, VendorSweet
-    with app.app_context():
-        db.create_all()
 
     return app
 
