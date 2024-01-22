@@ -1,6 +1,8 @@
-from app import create_app, app
-import random
-from datetime import datetime
+from app import app
+from flask import Flask
+from flask_migrate import Migrate
+from flask_sqlalchemy import SQLAlchemy
+from flask_restful import Api
 from models import  db, Vendor, Sweet, VendorSweet
 
 
